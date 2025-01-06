@@ -1,7 +1,8 @@
 const { Sequelize } = require('sequelize');
 const Image = require('../models/image');
 
-const sequelize = new Sequelize('journalsystem_microservices_db', 'ShanSaifi', 'Shan2003+TS', {
+
+const sequelize = new Sequelize('journalsystem_microservices_db', 'root', 'Shan123', {
     host: 'localhost',
     dialect: 'mysql',
 });
