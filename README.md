@@ -1,27 +1,29 @@
-# Message Service
+# Image Service
 
 ## Overview
-The **Message Service** allows patients and medical staff to communicate via a secure messaging system.
+The **Image Service** (written in **Node.js**) handles image uploads, retrievals, and editing. Doctors can **annotate** images by drawing or adding text.
 
 ## Features
-- Secure messaging between users
-- Role-based access (patients can only message their assigned doctors)
-- Message history storage
+- Upload and retrieve medical images
+- Image annotations (text & drawing)
+- Secure API endpoints
 
 ## Technologies Used
-- **Spring Boot**
-- **JPA & Hibernate**
-- **PostgreSQL/MySQL**
+- **Node.js & Express**
+- **Multer (file handling)**
+- **MongoDB (for image metadata)**
 - **Docker & Kubernetes**
 
 ## Installation & Setup
 ```sh
-git clone https://github.com/yourusername/message-service.git
-cd message-service
-mvn clean install
-docker build -t message-service .
-docker run -p 8085:8085 message-service
+git clone https://github.com/yourusername/image-service.git
+cd image-service
+npm install
+docker build -t image-service .
+docker run -p 8086:8086 image-service
+Other Services
+Integrated with Patient Service to link images to patients.
 ```
 
-## Other Services 
-- Works with User Service for authentication.
+## Other Services
+- Integrated with Patient Service to link images to patients.
